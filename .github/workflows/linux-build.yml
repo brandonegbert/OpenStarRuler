@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Linux Build
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install dependencies
-      run: apt-get install -y libpng-dev zlib1g-dev glew-utils freeglut3-dev libfreetype6-dev libvorbis3 libvorbis-dev libogg-dev libopenal-dev libbz2 libxrandr-dev libcurl-dev
+      run: sudo apt-get install -y libpng-dev zlib1g-dev glew-utils freeglut3-dev libfreetype6-dev libvorbis3 libvorbis-dev libogg-dev libopenal-dev libbz2 libxrandr-dev libcurl-dev
     - name: make
       run: make -f source/linux/Makefile compile
     - name: make check
