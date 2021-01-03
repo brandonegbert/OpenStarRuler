@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install dependencies
-      run: sudo apt-get install -y cmake libbz2-dev libcurl4-openssl-dev libglew-dev libglu1-mesa-dev libogg-dev libopenal-dev libpng16-dev libpulse-dev libstdc++-5-dev libvorbis-dev libwayland-dev libxi-dev libxrandr-dev zlib1g-dev
+      run: sudo apt-get install -y cmake libbz2-dev libcurl4-openssl-dev libglew-dev libglu1-mesa-dev libogg-dev libopenal-dev libpng-dev libpulse-dev libstdc++-5-dev libvorbis-dev libwayland-dev libxi-dev libxrandr-dev zlib1g-dev
     - name: make
       run: make -f source/linux/Makefile compile
     - name: make check
